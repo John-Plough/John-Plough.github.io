@@ -3,65 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Projects Portfolio</title>
-    <!-- TailwindCSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.7/dist/tailwind.min.css" rel="stylesheet" />
+    <title>John Plough - Selected Work</title>
+    <!-- TailwindCSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-gray-100">
+
+  <body class="bg-gray-100 min-h-screen flex flex-col">
     <!-- Header -->
-    <header class="bg-blue-600 p-6 text-white text-center">
-      <h1 class="text-3xl font-bold">My Projects Portfolio</h1>
+    <header class="p-6 text-white text-center" style="background-color: #0a66c2">
+      <h1 class="text-4xl font-extrabold drop-shadow-lg">John Plough | Fullstack Software Engineer</h1>
+      <h2 class="text-2xl md:text-3xl font-medium mt-2 italic">Selected Works</h2>
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto p-6">
+    <main class="flex-grow container mx-auto p-6">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Project Card 1 -->
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-          <!-- Replace with your project image -->
-          <img
-            src="https://images.theconversation.com/files/625049/original/file-20241010-15-95v3ha.jpg?ixlib=rb-4.1.0&rect=12%2C96%2C2671%2C1335&q=45&auto=format&w=1356&h=668&fit=crop/400x200"
-            alt="Project 1"
-            class="w-full"
-          />
+        <div
+          class="shadow-xl rounded-lg overflow-hidden transition-transform duration-300 transform hover:scale-105"
+          style="background-color: #0a66c2"
+        >
+          <img src="images/dog1.png" alt="Project 1" class="w-full" />
           <div class="p-4">
-            <h2 class="text-xl font-semibold mb-2">Project One</h2>
-            <p class="text-gray-600 mb-4">A brief description of project one goes here.</p>
-            <a href="project1.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            <h2 class="text-2xl font-semibold mb-2 text-white">House of Plough - ecommerce site</h2>
+            <p class="text-white mb-4">Fullstack ecommerce application.</p>
+            <a
+              href="project1.html"
+              class="inline-block font-semibold text-gray-800 bg-gray-100 px-4 py-2 mt-2 rounded transition-all duration-200 border border-transparent hover:border-black hover:bg-gray-300"
+            >
               Learn More
             </a>
           </div>
         </div>
 
         <!-- Project Card 2 -->
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-          <!-- Replace with your project image -->
-          <img
-            src="https://www.rover.com/blog/wp-content/uploads/2019/06/bernese-mountain-dog-1177074_1920.jpg"
-            alt="Project 2"
-            class="w-full"
-          />
+        <div
+          class="shadow-xl rounded-lg overflow-hidden transition-transform duration-300 transform hover:scale-105"
+          style="background-color: #0a66c2"
+        >
+          <img src="images/dog2.jpg" alt="Project 2" class="w-full" />
           <div class="p-4">
-            <h2 class="text-xl font-semibold mb-2">Project Two</h2>
-            <p class="text-gray-600 mb-4">A brief description of project two goes here.</p>
-            <a href="project2.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            <h2 class="text-2xl font-semibold mb-2 text-white">The Honeymaker - game</h2>
+            <p class="text-white mb-4">A new take on the game "snake" - for bee lovers.</p>
+            <a
+              href="project2.html"
+              class="inline-block font-semibold text-gray-800 bg-gray-100 px-4 py-2 mt-2 rounded transition-all duration-200 border border-transparent hover:border-black hover:bg-gray-300"
+            >
               Learn More
             </a>
           </div>
         </div>
 
         <!-- Project Card 3 -->
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-          <!-- Replace with your project image -->
-          <img
-            src="https://image.petmd.com/files/inline-images/weimaraner-puppy.jpg?VersionId=7o1jOaB91WOC4B9nV1cZFy467rLf8PZC/400x200"
-            alt="Project 3"
-            class="w-full"
-          />
+        <div
+          class="shadow-xl rounded-lg overflow-hidden transition-transform duration-300 transform hover:scale-105"
+          style="background-color: #0a66c2"
+        >
+          <img src="images/dog3.png" alt="Project 3" class="w-full" />
           <div class="p-4">
-            <h2 class="text-xl font-semibold mb-2">Project Three</h2>
-            <p class="text-gray-600 mb-4">A brief description of project three goes here.</p>
-            <a href="project3.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            <h2 class="text-2xl font-semibold mb-2 text-white">Weather Bar - xbar app</h2>
+            <p class="text-white mb-4">MacOS menu bar app that displays the current weather.</p>
+            <a
+              href="project3.html"
+              class="inline-block font-semibold text-gray-800 bg-gray-100 px-4 py-2 mt-2 rounded transition-all duration-200 border border-transparent hover:border-black hover:bg-gray-300"
+            >
               Learn More
             </a>
           </div>
@@ -70,8 +75,16 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 p-4 text-center text-white">
-      <p>Your Name Here</p>
+    <footer class="p-4 text-center text-white" style="background-color: #0a66c2">
+      <div class="flex justify-center items-center space-x-2 mb-2">
+        <span>Find me on</span>
+        <a href="https://www.linkedin.com/in/jplough" target="_blank" rel="noopener noreferrer">
+          <div class="bg-gray-200 p-1 rounded">
+            <img src="images/LI-Logo.png" alt="LinkedIn" class="h-6 inline-block" />
+          </div>
+        </a>
+      </div>
+      <p>© 2025</p>
     </footer>
   </body>
 </html>
