@@ -1,15 +1,26 @@
 :root {
-  --link-color: #0077cc;
-  --link-color-hover: #00487c;
-  --header-footer-bg-color: #d4cbc4;
-  --aside-accent-color: #9d836b;
-  --skill-bar-fill-color: #f3e4c6;
-  --blockquote-bg-color: #f7fafc;
-  --blockquote-accent-color: #4a5568;
-  --blockquote-text-color: #4a5568;
-  --header-link-color: #005999; /* soft light gray */
-  --header-link-hover-color: #ffffff;
+  --link-color: #005999;
+  --link-color-hover: #005999;
+  --header-footer-bg-color: #a0a3a8;
+  --header-footer-bg-image: url("/img/honey-im-subtle.png");
+  --aside-accent-color: #6b6b6b;
+  --skill-bar-fill-color: #d0d0d0;
+  --blockquote-bg-color: #f7f9fa;
+  --blockquote-accent-color: #5a5a5a;
+  --blockquote-text-color: #4a4a4a;
+  --header-link-color: #005999;
+  --header-link-hover-color: #005999;
+  --text-color: #3b3b3b;
   --spacing-inline: 0.5rem;
+}
+
+header,
+footer {
+  background-color: #a0a3a8;
+  background-image: url("/img/honey-im-subtle.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Base Styles */
@@ -19,6 +30,7 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
+  color: var(--text-color);
 }
 
 h1,
@@ -50,16 +62,8 @@ h3 {
   font-weight: 500;
 }
 
-h4 {
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-h5 {
-  font-size: 1rem;
-  font-weight: 500;
-}
-
+h4,
+h5,
 h6 {
   font-size: 1rem;
   font-weight: 500;
@@ -77,6 +81,7 @@ a {
 a:hover {
   color: var(--link-color-hover);
   text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
 address {
@@ -125,7 +130,7 @@ section {
   text-align: center;
 }
 
-/* Main Layout */
+/* Layout */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -140,8 +145,8 @@ section {
 
 .page-header,
 .page-footer {
-  background: var(--header-footer-bg-color);
-  color: #4a3f38;
+  background: var(--header-footer-bg-color) url("/img/honey-im-subtle.png") center / cover no-repeat;
+  color: var(--text-color);
 }
 
 .page-header {
@@ -156,7 +161,7 @@ section {
 }
 
 .page-header a {
-  color: var(--header-link-color); /* e.g., #7a5c51 */
+  color: var(--header-link-color);
   text-decoration: none;
   font-weight: 500;
 }
@@ -176,7 +181,9 @@ section {
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
-  border: 1px solid #ffffff; /* or use a variable if defined */
+  border: 1px solid #ffffff;
+  background-color: #7088a1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .header-info ul {
@@ -191,7 +198,7 @@ section {
 
 .header-label {
   font-size: 1.3rem;
-  color: #4a3f38;
+  color: var(--text-color);
   margin-top: 0.2rem;
   margin-bottom: 0.8rem;
 }
@@ -204,6 +211,7 @@ section {
   border-top: 1px solid #ccc;
 }
 
+/* Sections */
 .section-heading {
   display: flex;
   align-items: center;
@@ -292,10 +300,10 @@ aside li {
 }
 
 .inline-list li {
-  display: flex; /* This is for HTML Whitespace Issues */
+  display: flex;
 }
 
-/* Skillbars */
+/* Skill Bars */
 .skill-bar {
   width: 100%;
   height: 1.5rem;
@@ -309,7 +317,7 @@ aside li {
 
 .skill-bar-fill {
   height: 100%;
-  background: var(--skill-bar-fill-color) !important;
+  background: var(--skill-bar-fill-color);
   border-right: 1px solid #848484;
   border-radius: 2px;
   display: flex;
@@ -326,51 +334,39 @@ aside li {
 .w-0 {
   width: 0%;
 }
-
 .w-10 {
   width: 10%;
 }
-
 .w-20 {
   width: 20%;
 }
-
 .w-25 {
   width: 25%;
 }
-
 .w-30 {
   width: 30%;
 }
-
 .w-40 {
   width: 40%;
 }
-
 .w-50 {
   width: 50%;
 }
-
 .w-60 {
   width: 60%;
 }
-
 .w-70 {
   width: 70%;
 }
-
 .w-75 {
   width: 75%;
 }
-
 .w-80 {
   width: 80%;
 }
-
 .w-90 {
   width: 90%;
 }
-
 .w-100 {
   width: 100%;
   border-right: none;
@@ -389,6 +385,7 @@ blockquote {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+/* Media Queries */
 @media (min-width: 37.5rem) {
   .main-gallery {
     grid-template-columns: repeat(3, 1fr);
@@ -408,23 +405,12 @@ blockquote {
   aside h1 {
     font-size: 1.4rem;
   }
-
   aside h2 {
     font-size: 1.1rem;
   }
-
-  aside h3 {
-    font-size: 1rem;
-  }
-
-  aside h4 {
-    font-size: 1rem;
-  }
-
-  aside h5 {
-    font-size: 1rem;
-  }
-
+  aside h3,
+  aside h4,
+  aside h5,
   aside h6 {
     font-size: 1rem;
   }
@@ -477,7 +463,6 @@ blockquote {
 @media print {
   .skill-bar-label {
     background: transparent !important;
-    background-color: transparent !important;
     mix-blend-mode: darken;
   }
 
