@@ -511,6 +511,13 @@ blockquote {
     justify-content: center;
   }
 
+  blockquote {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   main,
   aside {
     width: 100%;
