@@ -2,7 +2,7 @@
   --link-color: #005999;
   --link-color-hover: #005999;
   --header-footer-bg-color: #a0a3a8;
-  --header-footer-bg-image: url("/img/honey-im-subtle.png");
+  --header-footer-bg-image: url("/img/natural-paper.png");
   --aside-accent-color: #6b6b6b;
   --skill-bar-fill-color: #d0d0d0;
   --blockquote-bg-color: #f7f9fa;
@@ -17,10 +17,10 @@
 header,
 footer {
   background-color: #a0a3a8;
-  background-image: url("/img/honey-im-subtle.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url("/img/natural-paper.png");
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: top left;
 }
 
 /* Base Styles */
@@ -138,18 +138,26 @@ section {
 }
 
 .page-content .container {
-  padding-left: 3rem;
+  padding-left: 1rem;
   display: grid;
   grid-template-columns: 1fr;
 }
 
 .page-header,
 .page-footer {
-  background: var(--header-footer-bg-color) url("/img/honey-im-subtle.png") center / cover no-repeat;
-  color: var(--text-color);
+  .page-header,
+  .page-footer {
+    background-color: var(--header-footer-bg-color);
+    background-image: url("/img/natural-paper.png");
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: top left;
+    color: var(--text-color);
+  }
 }
 
 .page-header {
+  color: #1f1f1f;
   padding-top: 3rem;
   padding-left: 3rem;
   border-bottom: 1px solid #ccc;
@@ -423,6 +431,10 @@ blockquote {
     flex-direction: row;
     align-items: flex-start;
     text-align: left;
+  }
+
+  .page-content main > section > section {
+    margin-bottom: 3rem;
   }
 
   .page-content .container {
