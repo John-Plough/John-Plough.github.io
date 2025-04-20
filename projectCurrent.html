@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Bar</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Nunito", "Segoe UI", "Helvetica Neue", sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .hero-container {
+        position: relative;
+        padding: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .back-button,
+      .bottom-button {
+        padding: 10px 18px;
+        background-color: #005999;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        text-decoration: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s;
+        font-family: "Nunito", "Segoe UI", "Helvetica Neue", sans-serif;
+      }
+
+      .back-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      }
+
+      .bottom-button {
+        display: inline-block;
+        margin: 0 0 20px 20px; /* top, right, bottom, left */
+        background-color: #005999;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        text-decoration: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s;
+        padding: 10px 18px;
+        font-family: "Nunito", "Segoe UI", "Helvetica Neue", sans-serif;
+      }
+
+      .back-button:hover,
+      .bottom-button:hover {
+        background-color: #00487c;
+      }
+
+      h1 {
+        margin-top: 40px;
+        font-size: 2rem;
+        text-align: center;
+        color: #005999;
+      }
+
+      h2 {
+        margin-top: 30px;
+        color: #00487c;
+      }
+
+      p {
+        margin-bottom: 1em;
+      }
+
+      @media (max-width: 600px) {
+        .hero-container {
+          padding: 16px;
+        }
+
+        .back-button,
+        .bottom-button {
+          left: 10px;
+          font-size: 14px;
+          padding: 8px 14px;
+        }
+
+        .back-button {
+          top: 10px;
+        }
+
+        .bottom-button {
+          bottom: 10px;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero-container">
+      <a href="#" onclick="history.back(); return false;" class="back-button">← Home</a>
+
+      <h1>TCoB - Taking Care of Business</h1>
+
+      <h2>App Description</h2>
+      <p>
+        A community-driven mapping tool designed to improve public access to essential civic amenities: restrooms, water
+        fountains, trash receptacles, and pet waste bag stations. The app leverages Google Maps and verified user
+        contributions to create a reliable, real-time resource for residents, visitors, and pet owners seeking clean and
+        accessible public infrastructure. By integrating Google OAuth authentication, the platform ensures data
+        integrity while empowering communities to report, confirm, and crowdsource the availability and condition of
+        local facilities. The app supports cleaner, more navigable public spaces — with focus on civic responsibility.
+      </p>
+
+      <h2>Tech Overview</h2>
+      <p>
+        I’m building a location-based civic mapping app using React, Rails, the Google Maps API, and Google OAuth to
+        allow verified users to report public restrooms, water fountains, waste bins, and pet waste bag stations.
+      </p>
+      <p>
+        The app will implement token-based authentication using OAuth2 and JWT, and feature a mobile-first UI designed
+        with TailwindCSS. I plan to deploy the React frontend on Netlify and the Rails API backend on Render.
+      </p>
+      <p>
+        By combining geospatial data modeling with client-side state management, the app will deliver a responsive,
+        real-time experience tailored to residents, tourists, and pet owners alike.
+      </p>
+
+      <h2>Tech In More Detail</h2>
+      <p>
+        <strong>Fullstack Architecture:</strong>
+        A decoupled React frontend and Rails API backend communicating over RESTful endpoints.
+      </p>
+      <p>
+        <strong>Authentication:</strong>
+        Google OAuth2 with secure JWT-based session handling for verified contributions.
+      </p>
+      <p>
+        <strong>Mapping:</strong>
+        Uses the Google Maps JS API with Geolocation to center the map on the user’s location and display civic
+        resources.
+      </p>
+      <p>
+        <strong>Geospatial Storage:</strong>
+        Coordinates stored in a PostgreSQL-backed Rails API with filtering by type and proximity.
+      </p>
+      <p>
+        <strong>Data Modeling & CRUD:</strong>
+        Models for users and resource types with full CRUD via the API and basic moderation logic.
+      </p>
+      <p>
+        <strong>Frontend Components:</strong>
+        Modular React components for forms, filters, map markers, and stateful interactions.
+      </p>
+      <p>
+        <strong>Mobile-First Design:</strong>
+        TailwindCSS for responsive layouts ideal for on-the-go use.
+      </p>
+      <p>
+        <strong>API Testing:</strong>
+        HTTPie and Postman used throughout development for endpoint and auth flow testing.
+      </p>
+      <p>
+        <strong>Deployment:</strong>
+        Rails backend on Render, React frontend on Netlify, with secure handling of API keys and secrets via environment
+        variables.
+      </p>
+      <p>
+        <strong>User Experience Focus:</strong>
+        Designed for urgency and ease — helping people find a restroom, trash bin, or water fountain with minimal
+        friction.
+      </p>
+    </div>
+
+    <a href="#" onclick="history.back(); return false;" class="bottom-button">← Home</a>
+  </body>
+</html>
